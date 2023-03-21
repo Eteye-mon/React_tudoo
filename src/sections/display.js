@@ -8,8 +8,8 @@ const Display = ({ tasks = [], onclick, show,edit, taskcount}) => {
   return (
     <div className="py-4  overflow-y-auto " style={{ height: "50vh" }}>
       
-      <div style={{display:tasks.length == 0 ?"none":"block"}}>
-        <img src={emptyimage} />
+      <div style={{display:tasks.length === 0 ?"block":"none"}}>
+        <img src={emptyimage} alt="empty state image" />
         <p className="text-white text-center fw-bold">You have 0 task, Click to add Task </p>
      </div>
       {tasks.map((task) => (
